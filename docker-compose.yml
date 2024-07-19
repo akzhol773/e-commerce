@@ -6,11 +6,12 @@ services:
     environment:
       POSTGRES_USER: akzhol
       POSTGRES_PASSWORD: akzhol
+      POSTGRES_DB: product
       PGDATA:  /var/lib/postgresql/data
     volumes:
       - postgres:/var/lib/postgresql/data
     ports:
-      - 5432:5432
+      - "5432:5432"
     networks:
       - microservices-net
     restart: unless-stopped
